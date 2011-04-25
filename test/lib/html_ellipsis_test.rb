@@ -1,3 +1,4 @@
+# coding: utf-8
 require File.expand_path("../../../lib/html_ellipsis", __FILE__)
 require "test/unit"
 
@@ -38,5 +39,11 @@ class HTMLEllipsisTest < Test::Unit::TestCase
     input    = "foo&lt;bar"
     expected = "foo&lt;b…" 
     assert_equal expected, ellipsize(input, 5)
+  end
+
+  def test_should_consider_all_codepoints_as_length_one
+    input    = "いろはにほへと"
+    expected = "いろは…"
+    assert_equal expected, ellipsize(input, 3)
   end
 end

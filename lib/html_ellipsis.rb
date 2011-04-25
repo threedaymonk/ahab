@@ -1,3 +1,4 @@
+# coding: utf-8
 require "strscan"
 
 module HTMLEllipsis
@@ -8,7 +9,7 @@ module HTMLEllipsis
     length = 0
     output = ""
     while length < max_length && !scanner.eos?
-      if scanner.scan(%r{&[^;]+;|[^<]})
+      if scanner.scan(%r{&[^;]+;|[^<]}u)
         length += 1
       elsif scanner.scan(%r{<([^\s/>]+)[^>/]*/>})
         # zero length
