@@ -1,6 +1,6 @@
 # coding: utf-8
 require File.expand_path("../common", __FILE__)
-require "html_utils/ellipsis"
+require "html_utils"
 
 class HTMLEllipsisTest < Test::Unit::TestCase
   include HTMLUtils

@@ -1,5 +1,5 @@
 require File.expand_path("../common", __FILE__)
-require "html_utils/rehead"
+require "html_utils"
 
 class HTMLReheadTest < Test::Unit::TestCase
   include HTMLUtils
