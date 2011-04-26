@@ -1,8 +1,8 @@
 require File.expand_path("../common", __FILE__)
-require "html_rehead"
+require "html_utils/rehead"
 
 class HTMLReheadTest < Test::Unit::TestCase
-  include HTMLRehead
+  include HTMLUtils
 
   def test_should_renumber_all_headings_up_from_specified_offset
     input    = "<h3>foo</h3><h4>bar</h4><h5>baz</h5>"

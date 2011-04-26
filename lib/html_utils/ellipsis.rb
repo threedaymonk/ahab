@@ -1,7 +1,7 @@
 # coding: utf-8
 require "strscan"
 
-module HTMLEllipsis
+module HTMLUtils
 
   def ellipsize(str, max_length, ellipsis="…")
     scanner = StringScanner.new(str)
@@ -27,5 +27,4 @@ module HTMLEllipsis
     output
   end
 
-  extend self
 end
